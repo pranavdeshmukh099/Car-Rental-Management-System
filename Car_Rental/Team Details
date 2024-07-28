@@ -1,0 +1,39 @@
+
+
+class mobileuser
+{
+	public static void main(String args[])
+	{
+		Mobile Samsung=new Mobile();
+		Samsung.insertsim(new Airtel());
+	}
+}
+
+class Mobile{
+	void insertsim(simcard sim){
+		sim.calling();
+		sim.message();
+	}
+
+}
+
+class Airtel implements simcard
+{
+	println("Airtel Calling");
+}
+
+class Jio implements simcard
+{
+	println("Jio Calling");
+}
+
+class VI implements simcard
+{
+	println("VI Calling");
+}
+
+interface simcard{
+	void calling();
+	void message();
+	
+}
